@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+.header-index
+{
+    user-select: none;
+    position: fixed;
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 96vw;
+    left: 1.5vw;   /* supaya tidak menempel ke kiri*/
+    background:transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.8s;
+    z-index: 1;
+}
+
+.header-index.sticky
+{
+    margin: 0;
+    top: 0;
+    left: 0;    /*spasi di kiri dan di atas dihapus*/
+    background: lightblue;
+    border-radius: 0px;
+    width: 100vw;
+}
+.icons
+{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    .header-index {
+        backdrop-filter: blur(3px);
+        margin: 5px 0;
+        padding: 0;
+        border-bottom: 0;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        border-right: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .header-index.sticky {
+        background: #bbb;
+    }
+    .menu{
+        position: absolute;
+        top: 50px;
+        right: -100%;  /* hide dulu */
+        width: 50%;
+        height: 13rem;
+        background: rgba(0, 0, 0, .7);
+        border-radius: 30px;
+        transition: right 0.8s, transform 0.8s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li{
+        margin: 1rem 0;
+    }
+    .menu a{
+        color: white;
+    }
+    .icons{
+        display: block;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    #check:checked~.menu{
+        right: 0;
+        transform: rotate(360deg);
+    }
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img
+{
+    width: 80px;
+    border-radius: 8px;
+}
+.logo h2{
+    font-size: xx-large;
+}
+.menu
+{
+    display: flex;
+    padding: 10px 0px;
+}
+.header-index ul
+{
+    display: flex;
+}
+.header-index li
+{
+    list-style: none;
+    text-align: center;
+}
+.header-index ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orangered;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+.header-index ul li:hover::after{
+    width: 80%;
+}
+.header-index a
+{
+    text-decoration: none;
+    color: rgb(121, 118, 118);
+    margin: 0 15px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+/* Responsive */
+@media only screen and (max-width: 800px) {
+        .logo img{
+            width: 50px;
+            border-radius: 8px;
+    }
+    .logo h2{
+        font-size: medium;
+    }
+  }
+
+/*home*/
+.home
+{
+    position: relative;
+    background-image: url("/assets/bg.jpg");
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh; /*supaya yang terlihat hanya section ini saja dulu*/
+}
+.top-text
+{
+    position: relative;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(248, 135, 29) 100%);
+    margin: 20vh 30vw 10vh;
+    padding: 40px 0;
+    border-radius: 40px;
+    border-bottom: 2px solid cornflowerblue;
+    font-size: larger;
+    min-width: fit-content;
+}
+/* Utnuk .top-text responsive */
+@media only screen and (max-width: 800px) {
+    .top-text {margin: 15px 2px;
+    font-size: small;}
+  }
+/* Slideshow container */
+.mySlides img
+{
+    width: 33vw;
+    height: 40vh;
+    border-radius: 18px;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  
+  /* Number text (1/5 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots */
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+
+.home .slide
+{
+    display: flex;
+    justify-content: space-around;
+}
+/* Utnuk .home slide responsive */
+@media only screen and (max-width: 800px) {
+    .home .slide {display: inline;}
+}
+.form-container
+{
+    background: transparent;
+    border-radius: 20px;
+    width: 30vw;
+    min-width: fit-content;
+    height: 40vh;
+    box-shadow: 0px 0px 50px orangered;
+    backdrop-filter: blur(15px);
+}
+@media only screen and (max-width: 800px) {
+    .form-container,
+    .slideshow-container,
+    .mySlides img {width: 94vw;
+    height: 30vh;}
+    .home .slide{
+        padding: 2px;
+    }
+    .form-container form {
+        width: 90vw;
+    }
+    
+}
+
+.home form
+{
+    display: flex;
+    flex-direction: column;
+}
+.home label
+{
+    color: #717171;
+    font-weight: bold;
+}
+.home .form-content
+{
+    margin: 15px 0;
+}
+.form-content input
+{
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.form-content :valid {
+    border: 2px solid rgb(33, 236, 33)
+}
+.form-content :invalid {
+  border: 2px solid red;
+}
+
+.form-content select
+{
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+.home button
+{
+    text-align: center;
+    align-self: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: large;
+    margin: 20px;
+    background: linear-gradient(black, rgba(255, 81, 0, 0.89), black);
+    border: 1px solid rgba(255, 81, 0, 0.89);
+}
+.home button:hover
+{
+    scale: 1.05;
+}
+/*Programme*/
+
+.programme
+{
+    padding: 50px 30px;
+}
+.programme-txt
+{
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.programme-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 30px;
+}
+@media only screen and (max-width: 800px) {
+    .programme-container {flex-direction: column;
+    padding: 5px 1px;}
+    .programme {
+        padding: 5px 1px;
+    }
+    .programme-list {
+        margin: 10px 0;
+    }
+}
+.programme-container .programme-list
+{
+    border-radius: 25px;
+    box-shadow: 1px 1px 8px gray;
+}
+.programme-container img
+{
+    width: 40vh;
+    height: 35vh;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10px 10px;
+}
+.course
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+}
+.offer
+{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+}
+.offer-list
+{
+    display: grid;
+    justify-items: center;
+}
+.price-container
+{
+    padding: 0px 10px 10px 10px;
+}
+.price
+{
+    background-color: rgb(206, 226, 253);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+.bookmark
+{
+    align-content: center;
+    font-size: x-large;
+}
+.price-pax
+{
+    align-content: center;
+    font-weight: 600;
+}
+
+
+
+
+/*Contacts*/
+
+.contacts
+{
+    background-color: black;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+@media only screen and (max-width: 800px) {
+    .contacts {
+        flex-direction: column;
+    }
+}
+.adresse, .email-us
+{
+    align-content: center;
+}
+.contacts h1, .contacts p
+{
+    padding-bottom: 25px;
+}
+.contacts img
+{
+    width: 70px;
+}
+.contacts-logo
+{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+}
+.email-area
+{
+    display: flex;
+    box-sizing: border-box;
+}
+.email-us input
+{
+    width: 250px;
+    height: 50px;
+    text-indent: 10px;
+    font-size: large;
+}
+.email-area :valid {
+    border: 2px solid rgb(33, 236, 33);
+}
+.email-area :invalid {
+  border: 2px solid red;
+}
+.email-us input:focus
+{
+    outline-style: none;
+}
+.email-us button
+{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 115, 0);
+    color: black;
+    border-style: none;
+    font-weight: bold;
+    font-size: large;
+}
+.contacts-icon
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+    
+}
+.contacts-icon .icon
+{
+    background-color: white;
+    padding: 3px 5px 0px 5px;
+    border-radius: 5px;
+}
+.contacts-icon .icon:hover
+{
+    background-color: rgb(255, 115, 0);
+    transform: scale(1.1);
+}
+.contacts-icon .icon i
+{
+    color: black;
+}
+
+/*footer*/
+footer
+{
+    text-align: center;
+    background-color: rgb(56, 55, 55);
+}
+
+/* Mulai styling untuk calc.html */
+
+.calc-welcome-txt
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#choiceSegitiga, #choiceJajar
+{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+#segitiga, #jajar
+{
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    background: white;
+    height: 35px;
+    color: blue;
+    font-size: large;
+}
+
+.calculator
+{
+    margin: 2vh 1vw;
+    border: 1px solid blue;
+    display: none;
+}
+.geometric-shape-img
+{
+    text-align: center;
+
+}
+.geometric-shape-data input
+{
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    outline: none;
+}
+.input-data :valid {
+    border: 2px solid rgb(33, 236, 33)
+}
+.input-data :invalid {
+  border: 2px solid red;
+}
+.geometric-shape-data button
+{
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: blue;
+    width: 120px;
+    height: 50px;
+}
+#hitung-btn
+{
+    text-align: center;
+}
+#reset-btn button
+{
+    border: none;
+    color: #fff;
+    background-color: orange;
+    width: 50px;
+    height: 30px;
+    border-radius: 2px;
+    margin: 30px 0;
+}
+#reset-btn
+{
+    text-align: end;
+    margin-right: 8px;
+}

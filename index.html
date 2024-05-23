@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Miniproject RevoU</title>       
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6e1c5c54ca.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <header class="header-index">
+            <div class="logo">
+                <img src="/assets/zero_logo.png">
+                <h2>Z<span style="color: orangered;">§</span>RO</h2>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <i class="fa fa-times" aria-hidden="true" id="close-icon"></i>
+            </label>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#our-offer">Our Offer</a></li>
+                    <li><a href="#contacts">Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="home">
+            <div class="top-text">
+                <h1>Welcome to Our Programming Course</h1>
+                <p>Enjoy the process of becoming a Developer with us! <span style="color: orangered;"><i class="fa-solid fa-fire-flame-curved"></i></span></p>
+            </div>
+            <div class="slide">
+                <div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 5</div>
+                          <img src="/assets/Slide.jpeg">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 5</div>
+                          <img src="/assets/Slide R.jpeg">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 5</div>
+                          <img src="/assets/Slide Python.jpeg">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="/assets/Slide Html.jpeg">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="/assets/Slide C++.jpeg">
+                        </div>
+                    </div>
+                        
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(5)"></span> 
+                    </div>
+                           
+                </div>
+                <div class="form-container">
+                    <form class="form-content">
+                        <label for="name">Name : 
+                            <input type="text" id="name" placeholder="Enter your Name" required>
+                        </label>
+                        <label for="email">Email : 
+                            <input type="email" id="email" placeholder="example@gmail.com" required>
+                        </label>
+                        <label for="reason">Reason to learn Coding : 
+                            <select name="reason" id="reason" required>
+                                <option value="" selected disabled> --Select an Option-- </option>
+                                <option value="Add skills">Add skills</option>
+                                <option value="Switch Job">Switch Job</option>
+                                <option value="Just fun">Just fun</option>
+                            </select>
+                        </label>
+                    </form>
+                    <button type="button" onclick="dataReceived()">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="programme" id="our-offer">
+            <div class="programme-txt">    
+                <h1 style="padding-bottom: 35px;">Our Offer</h1>
+                <p style="padding-bottom: 35px;">Explore the world of programming with Z<span style="color: orange;">§</span>RO<br>and secure your dream job. <a href="#example-section" style="text-decoration: none;">[Click here to have a hint of what you will learn]</a></p>
+            </div>
+            
+            <div class="programme-container">
+                <div class="programme-list">
+                    <div><img src="/assets/Html.jpeg"></div>
+                    <div class="course">
+                        <div>
+                            <h1>HTML Language</h1>
+                            <p>5 Months 3 Weeks</p>
+                        </div>
+                        <div style="color: orange;"><i class="fa-solid fa-star"></i>4.3</div>
+                    </div>
+                    <div class="offer">
+                        <div class="offer-list">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Documentation</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-video"></i>
+                            <p>1on1 Tutoring</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <p>Job Offer</p>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">
+                            <div class="bookmark"><i class="fa-solid fa-bookmark" style="color: orange;"></i></div>
+                            <div class="price-pax"><p>950.90$/person</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="programme-list">
+                    <div><img src="/assets/C++.jpeg"></div>
+                    <div class="course">
+                        <div>
+                            <h1>C++ Language</h1>
+                            <p>4 Months 3 Weeks</p>
+                        </div>
+                        <div style="color: orange;"><i class="fa-solid fa-star"></i>4.3</div>
+                    </div>
+                    <div class="offer">
+                        <div class="offer-list">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Documentation</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-video"></i>
+                            <p>1on1 Tutoring</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <p>Job Offer</p>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">
+                            <div class="bookmark"><i class="fa-solid fa-bookmark" style="color: orange;"></i></div>
+                            <div class="price-pax"><p>1200$/person</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="programme-list">
+                    <div><img src="/assets/Python.jpeg"></div>
+                    <div class="course">
+                        <div>
+                            <h1>Python Language</h1>
+                            <p>6 Months 2weeks</p>
+                        </div>
+                        <div style="color: orange;"><i class="fa-solid fa-star"></i>4.3</div>
+                    </div>
+                    <div class="offer">
+                        <div class="offer-list">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Documentation</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-video"></i>
+                            <p>1on1 Tutoring</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <p>Job Offer</p>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">
+                            <div class="bookmark"><i class="fa-solid fa-bookmark" style="color: orange;"></i></div>
+                            <div class="price-pax"><p>980.30$/person</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="programme-list">
+                    <div><img src="/assets/R.jpeg"></div>
+                    <div class="course">
+                        <div>
+                            <h1>R Language</h1>
+                            <p>6 Months 2 Weeks</p>
+                        </div>
+                        <div style="color: orange;"><i class="fa-solid fa-star"></i>4.3</div>
+                    </div>
+                    <div class="offer">
+                        <div class="offer-list">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Documentation</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-video"></i>
+                            <p>1on1 Tutoring</p>
+                        </div>
+                        <div class="offer-list">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <p>Job Offer</p>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">
+                            <div class="bookmark"><i class="fa-solid fa-bookmark" style="color: orange;"></i></div>
+                            <div class="price-pax"><p>1200$/person</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example-section">
+            <header class="calc-welcome-txt">
+                <div>
+                    <h1>Welcome to Katik</h1>
+                </div>
+                <br>
+                <div>
+                    <p>Hai Sobat, Selamat datang di Katik :] <br> Sebuah web apps sederhana yang berfungsi untuk menghitung luas bangun datar</p>
+                    <p>Mau menghitung luas bangun datar apa hari ini?</p>
+                </div>
+            </header>
+            
+            <section style="margin: 10px 2px;">
+                
+                    <div id="choiceSegitiga">
+                        <button id="segitiga" onclick="userChoiceSegitiga()">Segitiga</button>
+                    </div>
+                    <div id="choiceJajar">
+                        <button id="jajar" onclick="userChoiceJajar()">Jajar Genjang</button>
+                    </div>
+                
+            </section>
+            
+            <section class="calculator" id="calculatorSegitiga">
+                <header style="text-align: center; background-color: blue; height:15vh; align-content: center">
+                    <h1 style="color: #fff; font-size:xxx-large;">Luas Segitiga</h1>
+                </header>
+                <div class="geometric-shape-img">
+                    <img src="https://kartikasariyuni.wordpress.com/wp-content/uploads/2016/04/891d6-segitiga.jpg">
+                </div>
+            
+                <div>
+                    <div style="margin: 8px;">
+                        <p>Rumus Luas Segitiga yaitu : </p>
+                        <p style="text-align: center; font-weight: bold">L = 1/2 x a x t</p>
+                        <p>Di mana : </p>
+                        <p>L = Luas </p>
+                        <p>a = Panjang Alas</p>
+                        <p>t = Tinggi</p>
+                    </div>
+                    <br>
+                    <hr>
+                </div>
+                <br>
+                <br>
+                <header style="text-align: center;">
+                    <h1>Hitung Luas Segitiga</h1>
+                </header>
+                <form class="geometric-shape-data">
+                    <div class="input-data">
+                        <input id="alas-input"  type="number" placeholder="Nilai Alas" required>
+                    </div>
+                    <div class="input-data">
+                        <input id="tinggi-input" type="number" placeholder="Nilai Tinggi" required>
+                    </div>
+                    <div id="hitung-btn">
+                        <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
+                    </div>
+            
+                    <div id="hasil-calc">
+                        <p id="rumus-luas-segitiga"></p>
+                        <p id="input-data-segitiga"></p>
+                        <p id="hasil-segitiga"></p>
+                    </div>
+            
+                    <div id="reset-btn">
+                        <button type="button" onclick="clearFormSegitiga()">Reset</button>
+                    </div>
+                </form>
+                
+            </section>
+            
+            <section class="calculator" id="calculatorJajar">
+                <header style="text-align: center; background-color: blue; height:15vh; align-content: center">
+                    <h1 style="color: #fff; font-size:xxx-large;">Luas Jajar Genjang</h1>
+                </header>
+                <div class="geometric-shape-img">
+                    <img src="https://www.wikihow.com/images/thumb/1/1f/Calculate-the-Area-of-a-Parallelogram-Step-1-Version-3.jpg/v4-460px-Calculate-the-Area-of-a-Parallelogram-Step-1-Version-3.jpg">
+                </div>
+            
+                <div>
+                    <div style="margin: 8px;">
+                        <p>Rumus Luas Jajar Genjang yaitu : </p>
+                        <p style="text-align: center; font-weight: bold">A = B x h</p>
+                        <p>Di mana : </p>
+                        <p>A = Luas (atau Area) </p>
+                        <p>B = Panjang Alas (atau Basis) </p>
+                        <p>h = Tinggi (atau height) </p>
+                    </div>
+                    <br>
+                    <hr>
+                </div>
+                <br>
+                <br>
+                <header style="text-align: center;">
+                    <h1>Hitung Luas Jajar Genjang</h1>
+                </header>
+                <form class="geometric-shape-data">
+                    <div class="input-data">
+                        <input id="alas-jajar-input"  type="number" placeholder="Nilai Alas" required>
+                    </div>
+                    <div class="input-data">
+                        <input id="tinggi-jajar-input" type="number" placeholder="Nilai Tinggi" required>
+                    </div>
+                    <div id="hitung-btn">
+                        <button type="button" onclick="hitungLuasJajar()">Hitung</button>
+                    </div>
+            
+                    <div id="hasil-calc">
+                        <p id="rumus-luas-jajar"></p>
+                        <p id="input-data-jajar"></p>
+                        <p id="hasil-jajar"></p>
+                    </div>
+            
+                    <div id="reset-btn">
+                        <button type="button" onclick="clearFormJajar()">Reset</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <section class="contacts" id="contacts">
+            <div style="padding: 20px 0px;">
+                <div class="contacts-logo">
+                    <img src="/assets/zero_logo.png">
+                    <p>Z<span style="color: orange;">§</span>RO</p>
+                </div>
+                <div><p>Enjoy your learning process and<br>upgrade your programming skills<br>with an experienced community of<br>professionals with us.</p></div>
+                <div class="contacts-icon">
+                    <div class="icon"><a href="https://www.facebook.com/yeriel.fiandrianana/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="icon"><a href="https://wa.me/6281803526864"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="icon"><a href="https://www.instagram.com/yeriel.fiandrianana/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="icon"><a href="www.linkedin.com/in/ratsimandresy-yeriel-fiandrianana-0153ab309"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+            <div class="adresse">
+                <h1>Contact Us</h1>
+                <p>123 Jl. Veteran Malang</p>
+                <p>test@web.ok</p>
+                <p>+62-818-0352-6864</p>
+            </div>
+            <div class="email-us">
+                <h1>Sign up to our newspaper</h1>
+                <div style="display: flex;">
+                    <div class="email-area">
+                        <input id="user-email" type="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <button type="button" onclick="signUp()">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <footer style="color: #fff;"> <i class="fa-regular fa-copyright"></i> Designed by Yeriel Fiandrianana</footer>
+
+        <script src="/js/script.js"></script>
+
+    </body>
+</html>
